@@ -1,5 +1,6 @@
 from Calculator.Division import division
 from Calculator.Substraction import subtraction
+from Calculator.Addition import addition
 #from Calculator.Mean import mean
 
 def median(data):
@@ -10,13 +11,13 @@ def median(data):
     # data set has even number of elements
     if data_len % 2 == 0:
         # find middle left value
-        mid_left = data[data_len//2]
+        mid_left = data[division(data_len, 2)]
         # find middle right value
-        mid_right = data[data_len//2 -1]
+        mid_right = data[division(data_len, subtraction(2, 1))]
         # return mean of middle left and middle right values
-        return (mid_left + mid_right)/2
+        return division(addition(mid_left, mid_right), 2)
         # TODO: add after mean implementation
         #return mean(mid_left, mid_right)
     # data set has odd number of elements
     else:
-        return data[data_len//2]
+        return data[division(data_len, 2)]
