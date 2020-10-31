@@ -1,7 +1,7 @@
 from Calculator.Division import division
 from Calculator.Substraction import subtraction
 from Calculator.Addition import addition
-#from Calculator.Mean import mean
+from Statistics.Mean import mean
 
 def median(data):
     # TODO: sanitize data
