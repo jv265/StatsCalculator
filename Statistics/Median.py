@@ -11,13 +11,13 @@ def median(data):
     # data set has even number of elements
     if data_len % 2 == 0:
         # find middle left value
-        mid_left = data[division(data_len, 2)]
+        mid_left = data[division(2, data_len)]
         # find middle right value
-        mid_right = data[division(data_len, subtraction(2, 1))]
+        mid_right = data[division(subtraction(1, 2), data_len)]
         # return mean of middle left and middle right values
-        return division(addition(mid_left, mid_right), 2)
+        return division(2, addition(mid_left, mid_right))
         # TODO: add after mean implementation
         #return mean(mid_left, mid_right)
     # data set has odd number of elements
     else:
-        return data[division(data_len, 2)]
+        return data[division(2, data_len)]

@@ -9,5 +9,5 @@ def variance(data):
     sum = 0
     for i in range(n):
         sum = addition(sum, square(data[i]))
-    var = subtraction(division(sum, n), square(mean(data)))
+    var = subtraction(division(n, sum), square(mean(data)))
     return var
