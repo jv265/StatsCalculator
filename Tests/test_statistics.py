@@ -16,13 +16,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.statistics, Statistics)
 
     def test_mean_calculator(self):
-        test_data_mean = CsvReader('./Tests/Data/Unit Test Addition.csv').data
-        for row in test_data_mean:
-            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Result']))
-            self.assertEqual(self.calculator.result, int(row['Result']))
         mean = self.statistics.mean(self.testData)
-        print(self.testData)
-        print(mean)
 
     def test_mode_calculator(self):
         mode = self.statistics.mode(self.testData)
