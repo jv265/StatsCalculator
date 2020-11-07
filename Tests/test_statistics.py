@@ -4,20 +4,23 @@ from numpy.random import seed
 from CsvReader.CsvReader import CsvReader
 from Statistics.Statistics import Statistics
 import random
+import math
 import statistics
 import numpy as np
 
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.testData = np.random.choice(60, 20, True)
+        self.testData = np.random.choice(5, 5)
         self.statistics = Statistics()
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
 
     def test_mean_calculator(self):
-        mean = self.statistics.mean(self.testData)
+        print("TestData: " + str(self.testData))
+
+        mean = math.floor(self.statistics.mean(self.testData))
         self.assertEqual(mean, statistics.mean(self.testData))
 
     def test_mode_calculator(self):
@@ -33,6 +36,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_variance_calculator(self):
         variance = self.statistics.variance(self.testData)
+        self.assertEqual(math.floor(variance), statistics.variance(self.testData))
 
     def test_zscore_calculator(self):
         zscore = self.statistics.zscore(self.testData, 5)
