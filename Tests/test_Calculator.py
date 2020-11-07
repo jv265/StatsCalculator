@@ -64,8 +64,8 @@ class MyTestCase(unittest.TestCase):
     def test_division(self):
         test_data_divide = CsvReader('./Tests/Data/Unit Test Division.csv').data
         for row in test_data_divide:
-            self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), round(float(row['Result']), 9))
-            self.assertEqual(self.calculator.result, round(float(row['Result']), 9))
+            self.assertEqual(round(self.calculator.divide(row['Value 1'], row['Value 2']), 9), round(float(row['Result']), 9))
+            self.assertEqual(round(self.calculator.result, 9), round(float(row['Result']), 9))
 
     def test_square(self):
         test_data_square = CsvReader('./Tests/Data/Unit Test Square.csv').data
@@ -76,8 +76,8 @@ class MyTestCase(unittest.TestCase):
     def test_square_root(self):
         test_data_square_root = CsvReader('./Tests/Data/Unit Test Square Root.csv').data
         for row in test_data_square_root:
-            self.assertEqual(self.calculator.square_root(row['Value 1']), round(float(row['Result']), 8))
-            self.assertEqual(self.calculator.result, round(float(row['Result']), 8))
+            self.assertEqual(round(self.calculator.square_root(row['Value 1']), 8), round(float(row['Result']), 8))
+            self.assertEqual(round(self.calculator.result, 8), round(float(row['Result']), 8))
 
 
 if __name__ == '__main__':

@@ -1,5 +1,7 @@
 from Calculator.Square import square
 from Calculator.Substraction import subtraction
+from Calculator.Addition import addition
+from Calculator.Division import division
 from Statistics.Mean import mean
 import math
 from Validation.Validations import empty_list_check
@@ -12,9 +14,9 @@ def variance(data):
     check_for_valid_numbers(data)
 
     n = len(data)
-    calculated_mean = math.floor(mean(data))
-    calculated_list = []
+    calculated_mean = mean(data)
+    result = 0
 
-    for i in range(n):
-        calculated_list.insert(i, square(subtraction(calculated_mean, data[i])))
-    return mean(calculated_list)
+    for x in data:
+        result = addition(square(subtraction(calculated_mean, x)), result)
+    return division(n - 1, result)
