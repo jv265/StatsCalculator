@@ -25,4 +25,4 @@ def median(data):
         return mean(list_of_items)
     else:
         # data set has odd number of elements
-        return data[round(division(2, data_len))]
+        return data[math.floor(division(2, data_len))]

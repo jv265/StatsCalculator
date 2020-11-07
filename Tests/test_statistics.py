@@ -29,6 +29,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_median_calculator(self):
         median = self.statistics.median(self.testData)
+        self.assertEqual(median, statistics.median(self.testData))
 
     def test_variance_calculator(self):
         variance = self.statistics.variance(self.testData)
