@@ -1,8 +1,14 @@
 from Calculator.Addition import addition
 from Calculator.Division import division
+from Validation.Validations import empty_list_check
+from Validation.Validations import check_for_valid_numbers
 
 
 def mean(data):
+    # Validations
+    empty_list_check(data)
+    check_for_valid_numbers(data)
+
     num_values = len(data)
     total = 0
 

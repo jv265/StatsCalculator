@@ -1,9 +1,15 @@
 from Calculator.Division import division
 from Statistics.Mean import mean
 import math
+from Validation.Validations import empty_list_check
+from Validation.Validations import check_for_valid_numbers
 
 
 def median(data):
+    # Validations
+    empty_list_check(data)
+    check_for_valid_numbers(data)
+
     data_len = len(data)
     data.sort()
 

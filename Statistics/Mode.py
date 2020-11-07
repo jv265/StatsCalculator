@@ -1,4 +1,11 @@
+from Validation.Validations import empty_list_check
+from Validation.Validations import check_for_valid_numbers
+
+
 def mode(data):
+    empty_list_check(data)
+    check_for_valid_numbers(data)
+
     list_number_of_occurrences = {}
     result = 0
     result_value = 1

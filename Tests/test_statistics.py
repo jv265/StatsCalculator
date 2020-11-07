@@ -18,16 +18,11 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.statistics, Statistics)
 
     def test_mean_calculator(self):
-        print("TestData: " + str(self.testData))
-
         mean = math.floor(self.statistics.mean(self.testData))
         self.assertEqual(mean, statistics.mean(self.testData))
 
     def test_mode_calculator(self):
         mode = self.statistics.mode(self.testData)
-        print("TestData: " + str(self.testData))
-        print(mode)
-        print(statistics.mode(self.testData))
         self.assertEqual(mode, statistics.mode(self.testData))
 
     def test_median_calculator(self):
@@ -35,14 +30,19 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(median, statistics.median(self.testData))
 
     def test_variance_calculator(self):
+        print('Variance Test')
+        print(self.testData)
         variance = self.statistics.variance(self.testData)
         self.assertEqual(math.floor(variance), statistics.variance(self.testData))
 
     def test_zscore_calculator(self):
-        zscore = self.statistics.zscore(self.testData, 5)
+        zscore = self.statistics.zscore(self.testData, random.randint(1, 10))
+        print("Stats Zscore calculated: " + str(stats.zscore(self.testData)))
+        self.assertEqual(zscore, stats.zscore(self.testData))
 
     def test_standard_deviation_calculator(self):
         standard_deviation = self.statistics.standard_deviation(self.testData)
+        self.assertEqual(round(standard_deviation, 2), round(statistics.stdev(self.testData), 2))
 
 
 if __name__ == '__main__':

@@ -2,9 +2,15 @@ from Statistics.StandardDeviation import standard_deviation
 from Calculator.Multiplication import multiplication
 from Calculator.Division import division
 from Calculator.SquareRoot import square_root
+from Validation.Validations import empty_list_check
+from Validation.Validations import check_for_valid_numbers
 
 
 def margin_of_error(sample, confidence_level):
+    # Validations
+    empty_list_check(sample)
+    check_for_valid_numbers(sample)
+
     # Source: https://www.surveymonkey.com/mp/margin-of-error-calculator/
     # First find our Z value from a confidence level
     if confidence_level == 80:

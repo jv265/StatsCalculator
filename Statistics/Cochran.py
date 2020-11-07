@@ -3,9 +3,14 @@ from Calculator.Multiplication import multiplication
 from Calculator.Division import division
 from Statistics.StandardDeviation import standard_deviation
 from Statistics.MarginOfError import margin_of_error
+from Validation.Validations import empty_list_check
+from Validation.Validations import check_for_valid_numbers
 
 
 def cochran(sample, confidence_interval, x):
+    # Validations
+    check_for_valid_numbers(sample)
+    empty_list_check(sample)
 
     # n (sample size calculation) = (z ^2 * sd) / moe
     # calculate z from a given confidence interval
