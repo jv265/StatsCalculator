@@ -46,6 +46,24 @@ class MyTestCase(unittest.TestCase):
         standard_deviation = self.statistics.standard_deviation(self.testData)
         self.assertEqual(round(standard_deviation), round(statistics.stdev(self.testData)))
 
+    def test_confidence_level_calculator(self):
+        # define sample, confidence level
+        confidence_level = self.statistics.confidence_interval(self.testData)
+
+    def test_simple_random_sampling_calculator(self):
+        # define sample, size
+        standard_deviation = self.statistics.simple_random_sampling(self.testData)
+
+    def test_sample_size_unknown_population_calculator(self):
+        # define confidence level, width
+        standard_deviation = self.statistics.sample_size_unknown_population(self.testData)
+
+    def test_cochran_calculator(self):
+        cochran = self.statistics.cochran(self.testData)
+
+    def test_margin_of_error_calculator(self):
+        margin_of_error = self.statistics.margin_of_error(self.testData)
+
 
 if __name__ == '__main__':
     unittest.main()
