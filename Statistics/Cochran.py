@@ -18,5 +18,5 @@ def cochran(sample, confidence_level):
     # calculate z from a given confidence interval
     z = CalculateZValue.calculate_zvalue(confidence_level)
 
-    margin_of_error_result = square(margin_of_error(sample))
+    margin_of_error_result = square(margin_of_error(sample, confidence_level))
     return division(margin_of_error_result, multiplication(multiplication(square(z), 0.5), 0.5))
