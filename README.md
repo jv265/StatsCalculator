@@ -3,6 +3,7 @@
 [![Build_Status](https://travis-ci.com/jv265/StatsCalculator.svg?branch=master)](https://travis-ci.com/jv265/StatsCalculator)
 
 <h1>Project Plan</h1>
+<h2>Outline</h2>
 Statistics Object <br>
 <pre>
 <b>Methods</b>
@@ -35,7 +36,7 @@ Static Classes
     Methods
         Divide the difference between the data mean and the raw score from the standard deviation
 </pre>
-<h1>Task List</h1>
+<h2>Task List</h2>
 <pre>
 <b>1. Mean </b>
 __________________
