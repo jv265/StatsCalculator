@@ -36,11 +36,11 @@ class MyTestCase(unittest.TestCase):
 
     def test_variance_calculator(self):
         variance = self.statistics.variance(self.testData)
-        self.assertEqual(math.floor(variance), statistics.variance(self.testData))
+        self.assertEqual(round(variance), statistics.variance(self.testData))
 
     def test_zscore_calculator(self):
         zscore = self.statistics.zscore(self.testData2, 9)
-        self.assertEqual(round(zscore, 2), -0.94)
+        self.assertEqual(round(zscore, 2), -0.97)
 
     def test_standard_deviation_calculator(self):
         standard_deviation = self.statistics.standard_deviation(self.testData)

@@ -19,4 +19,4 @@ def variance(data):
 
     for x in data:
         result = addition(square(subtraction(calculated_mean, x)), result)
-    return division(n - 1, result)
+    return division(n, result)
