@@ -2,6 +2,8 @@
 
 [![Build_Status](https://travis-ci.com/jv265/StatsCalculator.svg?branch=master)](https://travis-ci.com/jv265/StatsCalculator)
 
+<a href="https://github.com/jv265/StatsCalculator/projects/1"> Work Log </a>
+- Jordan Pisaniello, Josh Vilson
 <h1>Project Plan</h1>
 <h2>Outline</h2>
 Statistics Object <br>
@@ -136,6 +138,66 @@ Step 1. Find Mean
 Step 2. Find our Standard Deviation
 = 2.2
 Step 3. Subtract raw score from mean and divide by standard deviation
-(10 - 3) / 2.2 = 3.18
-
+(10 - 3) / 2.2 = 3.18 <br>
+<b>7. Cochran</b>
+__________________
+<b>Description</b>
+Calculates the sample size given the confidence level and sample <br>
+<b>Formula</b>
+(Z^2)(p)(q) / (e^2); where p and q = 0.5; (reference) - https://www.statisticshowto.com/probability-and-statistics/find-sample-size/ <br>
+<b>Example</b>
+[0, 2, 4, 6, 8, 9], confidence level = 90
+Step 1. Find Z value from confidence level
+90 => 1.645 = Z
+Step 2. Find our margin of error 
+= z * (o /  sqrt(n)) = 1.645 * (3.18 / 2.45) = 2.14
+Step 3. Finish calculating result
+(27.06)(0.5)(0.5)/4.58 = 1.48<br>
+<b>8. Margin of Error</b>
+__________________
+<b>Description</b>
+Gives us an idea of how many percentage points your result will differ from real population value given the confidence level and sample <br>
+<b>Formula</b>
+z * (o /  sqrt(n)); o is our standard deviation<br>
+<b>Example</b>
+[0, 2, 4, 6, 8, 9], confidence level = 90
+Step 1. Find Z value from confidence level
+90 => 1.645 = Z
+Step 2. Calculate result
+1.645 * (3.18 / 2.45) = 2.14 <br>
+<b>9. Confidence Interval</b>
+__________________
+<b>Description</b>
+It defines for us how much uncertainty there is for a particular statistic given a confidence level and sample<br>
+<b>Formula</b>
+u + ((o / sqrt(n)) * z); where u is our mean, o is our standard deviation <br>
+<b>Example</b>
+[0, 2, 4, 6, 8, 9], confidence level = 90
+Step 1. Find Z from confidence level
+90 => 1.645 = Z
+Step 2. Find Mean
+(0 + 2 + 4 + 6 + 8 + 9) / 6 = 4.83 = u
+Step 3. Calculate result
+= 4.83 + ((3.18 / 2.45) * 1.645) = 6.97 <br>
+<b>10. Sample Size Unknown Population</b>
+__________________
+<b>Description</b>
+Calculates the sample size without knowledge of population. Takes in confidence level and width.<br>
+<b>Formula</b>
+((Z / (width / 2))^2 * (0.5 * 0.5)<br>
+<b>Example</b>
+Confidence level = 90, width = 5
+Step 1. Find Z from level
+90 => 1.645 = Z
+Step 2. Calculate result
+= ((1.645 / (5 / 2))^2 * (0.5 * 0.5) = 0.11<br>
+<b>11. Simple random sampling</b>
+__________________
+<b>Description</b>
+Retrieves a sample given the list of values and sample size <br>
+<b>Formula</b>
+N/A <br>
+<b>Example</b>
+[0, 2, 4, 6], sample size = 2
+Result = [2, 6]; randomly selects
 </pre>
