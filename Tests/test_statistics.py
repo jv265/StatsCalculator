@@ -46,13 +46,15 @@ class MyTestCase(unittest.TestCase):
         standard_deviation = self.statistics.standard_deviation(self.testData)
         self.assertEqual(round(standard_deviation), round(statistics.stdev(self.testData)))
 
-    #def test_confidence_interval_calculator(self):
+    def test_confidence_interval_calculator(self):
         # define sample, confidence interval
-        #confidence_interval = self.statistics.confidence_interval(self.testData)
+        confidence_interval = self.statistics.confidence_interval(self.testData2, 95)
+        self.assertEqual(round(confidence_interval, 0), 44)
 
-    #def test_simple_random_sampling_calculator(self):
+    def test_simple_random_sampling_calculator(self):
         # define sample, size
-        #standard_deviation = self.statistics.simple_random_sampling(self.testData)
+        random_sample = self.statistics.simple_random_sampling(self.testData2, 11)
+        self.assertEqual(len(random_sample), 11)
 
     def test_sample_size_unknown_population_calculator(self):
         # define confidence level, width

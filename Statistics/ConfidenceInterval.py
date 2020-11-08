@@ -6,6 +6,7 @@ from Calculator.Multiplication import multiplication
 from Calculator.Addition import addition
 from Validation.Validations import empty_list_check
 from Validation.Validations import check_for_valid_numbers
+from Statistics.CalculateZValue import calculate_zvalue
 
 
 def confidence_interval(sample, confidence_level):
@@ -13,7 +14,7 @@ def confidence_interval(sample, confidence_level):
     empty_list_check(sample)
     check_for_valid_numbers(sample)
 
-    z = confidence_level
+    z = calculate_zvalue(confidence_level)
     n = len(sample)
     s = standard_deviation(sample)
     x = mean(sample)
