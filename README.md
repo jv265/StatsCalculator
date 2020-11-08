@@ -71,11 +71,11 @@ If there are more than one, exit. <br>
 Result: 2 <br>
 <b>4. Standard Deviation </b>
 __________________
-Description
+<b>Description</b>
 Measures the variation within a set of values. <br>
-Formula
+<b>Formula</b>
 √(∑(x - u)^2 / n); Where u stands for our mean; The square root of the variance.<br>
-Example
+<b>Example</b>
 [0, 2, 4, 6]
 Step 1. Find Mean
 (0 + 2 + 4 + 6) / 4 = 3
