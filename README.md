@@ -14,6 +14,12 @@ Statistics Object <br>
     Standard Deviation → Calls standard deviation method from StandardDeviation class
     Variance → Calls variance method from Variance class
     Z-Score → Calls z-score method from ZScore class
+    SimpleRandomSampling → Calls simple random sampling method from the SimpleRandomSampling class
+    SampleSizeUnkownPop → Calls sample size unknown population method from SampleSizeUnkownPop class
+    MarginOfError → Calls margin of error method from MarginOfError class
+    Cochran → Calls cochran method from Cochran class
+    ConfidenceInterval → Calls confidence interval method from ConfidenceInterval class
+
 </pre>
 Static Classes
 <pre>
@@ -35,6 +41,23 @@ Static Classes
 6. Z-Score
     Methods
         Divide the difference between the data mean and the raw score from the standard deviation
+7. SimpleRandomSampling
+    Methods
+        Returns a random sample from inputted data set and size
+8. SampleSizeUnknownPop
+    Methods
+        Calculates the sample size when the population is unknown, but confidence level and width are known
+9. MarginOfError
+    Methods
+        Multiplies z by the square root of the sample size divided by the standard deviation
+10. Cochran
+    Methods
+        Divides z squared times p and q by the margin of error squared
+        
+11. ConfidenceInterval
+    Methods
+        Divides the standard deviation of the sample by the square root of the sample length times z, added to x
+
 </pre>
 <h2>Task List</h2>
 <pre>
