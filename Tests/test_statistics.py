@@ -35,8 +35,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(median, statistics.median(self.testData))
 
     def test_variance_calculator(self):
-        variance = self.statistics.variance(self.testData)
-        self.assertEqual(round(variance), statistics.variance(self.testData))
+        variance = self.statistics.variance(self.testData2)
+        self.assertEqual(round(variance, 2), round(statistics.pvariance(self.testData2), 2))
 
     def test_zscore_calculator(self):
         zscore = self.statistics.zscore(self.testData2, 9)
@@ -60,11 +60,13 @@ class MyTestCase(unittest.TestCase):
         sample_size = self.statistics.sample_size_unknown_population(95, 0.06)
         self.assertEqual(sample_size, 1067.11)
 
-    #def test_cochran_calculator(self):
-        #cochran = self.statistics.cochran(self.testData)
+    def test_cochran_calculator(self):
+        cochran = self.statistics.cochran(self.testData2, 80)
+        self.assertEqual(round(cochran, 2), 0.01)
 
-    #def test_margin_of_error_calculator(self):
-        #margin_of_error = self.statistics.margin_of_error(self.testData)
+    def test_margin_of_error_calculator(self):
+        margin_of_error = self.statistics.margin_of_error(self.testData2, 95)
+        self.assertEqual(round(margin_of_error, 2), 10.96)
 
 
 if __name__ == '__main__':

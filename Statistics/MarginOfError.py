@@ -12,6 +12,8 @@ def margin_of_error(sample, confidence_level):
     empty_list_check(sample)
     check_for_valid_numbers(sample)
 
+    # Formula - z * (o /  sqrt(n)); o is our standard deviation
+    # Reference - https://www.surveymonkey.com/mp/margin-of-error-calculator/
     z = CalculateZValue.calculate_zvalue(confidence_level)
     sample_size = len(sample)
     standard_deviation_result = standard_deviation(sample)
