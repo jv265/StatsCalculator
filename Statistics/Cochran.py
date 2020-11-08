@@ -12,6 +12,7 @@ def cochran(sample, confidence_interval, x):
     check_for_valid_numbers(sample)
     empty_list_check(sample)
 
+    # Formula: (Z^2)(p)(q) / (e^2) -> https://www.statisticshowto.com/probability-and-statistics/find-sample-size/
     # n (sample size calculation) = (z ^2 * sd) / moe
     # calculate z from a given confidence interval
     # 90 % -> 1.645
@@ -30,5 +31,5 @@ def cochran(sample, confidence_interval, x):
         z = 2.575
     else:
         return 0
-    margin_of_error_result = margin_of_error(sample, x)
-    return division(margin_of_error_result, multiplication(square(z), standard_deviation(sample)))
+    margin_of_error_result = square(margin_of_error(sample, x))
+    return division(margin_of_error_result, multiplication(multiplication(square(z), 1.5), 1.5))
