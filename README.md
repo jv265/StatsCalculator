@@ -2,8 +2,30 @@
 
 [![Build_Status](https://travis-ci.com/jv265/StatsCalculator.svg?branch=master)](https://travis-ci.com/jv265/StatsCalculator)
 
-<a href="https://github.com/jv265/StatsCalculator/projects/1"> Work Log </a>
-- Jordan Pisaniello, Josh Vilson
+<a href="https://github.com/jv265/StatsCalculator/projects/1"> Work Log </a> <br>
+Jordan Pisaniello
+- Project Plan
+- Set a seed and randomly select the same value from a list
+- Select a random item from a list
+- Generate a list of N random numbers with a seed and between a range of numbers 
+- Median
+- Variance
+- ZScore
+- Find a Sample Size Given a Confidence Interval and Width (unknown population standard deviation)
+- Simple Random Sampling
+- Confidence Interval <br><br>
+Josh Vilson
+- Task List
+- Generate a random number without a seed between a range of two numbers
+- Generate a random number with a seed between a range of two numbers 
+- Select N number of items from a list without a seed
+- Select N number of items from a list with a seed
+- Mean
+- Mode
+- Standard Deviation
+- Margin of Error
+- Cochran
+
 <h1>Project Plan</h1>
 <h2>Outline</h2>
 Statistics Object <br>
